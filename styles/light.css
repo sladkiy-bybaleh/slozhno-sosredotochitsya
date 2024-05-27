@@ -9,4 +9,89 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  
+  --primary-font-family: 'IBM Plex mono', sans-serif;
+  --font-size-text: 18px;
+  --primary-color: #FFC2E6;
+  --main-background-image: url(../images/cover-image-light.png);
+  --accent-color: #FF8DCB;
+  --color-text-titel: #353430;
+  --color-menu: #353430;
+  --shadow-color: #ff0070;
+  --link-color: #FF8DCB;
+  --menu-button-color: #ff0070;
+  --hover-color: 1px solid rgba(50, 49, 45, 0.4);
+  --hover-color-text: rgba(53, 52, 48, 1);
+  --title-color:  #FFC2E6; 
+  --title-shadow-color: 4px 4px 0 var(--accent-color);
+  --content-text-color: #F1B2CE;
+  --section-text-color: #353430;
+  --footer-title:  #FFC2E6;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-font-family: 'IBM Plex mono', sans-serif;
+  --font-size-text: 18px;
+  --primary-color: #FFC2E6;
+  --main-background-image: url(../images/cover-image-light.png);
+  --accent-color: #FF8DCB;
+  --color-text-titel: #353430;
+  --color-menu: #353430;
+  --shadow-color: #ff0070;
+  --menu-button-color: #ff0070;
+  --hover-color: 1px solid rgba(50, 49, 45, 0.4);
+  --hover-color-text: rgba(53, 52, 48, 1);
+  --title-color:  #FFC2E6; 
+  --link-color: #FF8DCB;
+  --title-shadow-color: 4px 4px 0 var(--accent-color);
+  --content-text-color: #F1B2CE;
+  --section-text-color: #353430;
+  --footer-title:  #FFC2E6;
+  --color-border-link: #353430;
+    }
+  }
+
+.page.theme_light .header__decor__rec {
+  display: none;
+}
+
+
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-menu);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--color-menu);
+}
+
+.header__theme-menu-button:focus {
+  border: none;
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--color-menu);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--color-border-link);
+}
+
+.decorated-zone::before {
+border-color: var(--color-menu);
+}
+
+.decorated-zone::after {
+  border-color: var(--color-menu);
+}
+
