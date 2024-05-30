@@ -18,7 +18,6 @@
   background-color: var(--accent-color);
 }
 
-
 .header__decor__rec {
   position: absolute;
   display: inline-block;
@@ -94,7 +93,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid  var(--menu-button_active);
+  border: 1px solid var(--menu-button_active);
 }
 
 .header__theme-menu-button:hover {
@@ -105,7 +104,6 @@
   border: none;
   outline: none;
 }
-
 
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--color-focus);
@@ -177,7 +175,6 @@
 .link:focus-visible {
   outline: 1px solid var(--color-focus-link);
 }
- 
 
 .content__section__concentrations {
   padding-block-start: 80px;
@@ -265,7 +262,6 @@
 }
 
 @media (width < 1024px) {
-  
   .header {
     gap: 62px;
   }
@@ -338,7 +334,6 @@
     top: 20px;
     right: 20px;
   }
-
 }
 
 @media (width < 768px) {
@@ -407,7 +402,7 @@
     width: 100%;
   }
 
-  .content__section__gold-fish{
+  .content__section__gold-fish {
     padding-block-start: 14%;
   }
 
@@ -422,7 +417,7 @@
     margin-block-start: 0;
     margin-block-end: 0;
   }
- 
+
   .footer {
     min-height: 668px;
   }
