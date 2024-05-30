@@ -1,5 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+
 .page {
   background-color: var(--primary-color);
   background-image: var(--main-background-image);
@@ -17,11 +18,12 @@
   background-color: var(--accent-color);
 }
 
+
 .header__decor__rec {
   position: absolute;
   display: inline-block;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--decor-zone);
   top: 20px;
   right: 48px;
 }
@@ -30,10 +32,10 @@
   content: "";
   width: 9px;
   height: 9px;
-  background-color: var(--accent-color);
+  background-color: var(--decor-zone);
   border-radius: 50%;
   position: absolute;
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--decor-zone-shadow);
   top: 50%;
   right: 0;
   margin: -5px -20px 0 0;
@@ -44,8 +46,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--decor-zone-corner);
+  border-bottom: 1px solid var(--decor-zone-corner);
   bottom: 20px;
   left: 20px;
 }
@@ -55,8 +57,8 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--decor-zone-corner);
+  border-top: 1px solid var(--decor-zone-corner);
   top: 20px;
   right: 20px;
 }
@@ -66,7 +68,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 77px;
-  min-block-size: 100vh;
+  min-height: 668px;
 }
 
 .header__theme-menu {
@@ -84,10 +86,15 @@
   border: none;
   text-transform: lowercase;
   background-color: transparent;
-  color: var(--color-menu);
+  color: var(--menu-batton);
   min-height: 26px;
   min-width: 70px;
   cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid  var(--menu-button_active);
 }
 
 .header__theme-menu-button:hover {
@@ -99,8 +106,9 @@
   outline: none;
 }
 
+
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--color-focus);
 }
 
 .header__title {
@@ -128,7 +136,7 @@
   line-height: 130%;
 }
 
-.content__section__one {
+.content__section__focused {
   padding-block-start: 60px;
 }
 
@@ -144,14 +152,17 @@
   font-size: var(--font-size-text);
 }
 
+.item__title_indent {
+  padding-block-start: 20px;
+}
+
 .content__item__text {
-  margin-block-end: 20px;
   color: var(--content-text-color);
 }
 
 .link {
   text-decoration: none;
-  text-shadow: 1px 1px 0 var(--color-border-link);
+  text-shadow: 1px 1px 0 var(--color-shadow-link);
   cursor: pointer;
 }
 
@@ -164,11 +175,13 @@
 }
 
 .link:focus-visible {
-  outline: 1px solid var(--content-text-color);
+  outline: 1px solid var(--color-focus-link);
 }
+ 
 
-.content__section_two {
-  padding-block-start: 60px;
+.content__section__concentrations {
+  padding-block-start: 80px;
+  line-height: 130%;
 }
 
 .section__title_two {
@@ -182,8 +195,8 @@
   gap: 20px;
 }
 
-.content__section_thee {
-  padding-block-start: 64px;
+.content__section__gold-fish {
+  padding-block-start: 80px;
 }
 
 .font__weight__three {
@@ -194,10 +207,15 @@
   margin-block-end: 20px;
   color: var(--section-text-color);
   font-size: var(--font-size-text);
+  max-width: 668px;
+}
+
+.list__item__gold-fish {
+  grid-column-start: 2;
 }
 
 .gallery {
-  padding-block-start: 61px;
+  padding-block-start: 80px;
 }
 
 .gallery__img {
@@ -236,13 +254,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-block-size: 100vh;
+  min-height: 768px;
 }
 
 .footer__title {
   color: var(--footer-title);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   text-shadow: 2px 2px 0 var(--shadow-color);
+  padding-block-start: 17px;
 }
 
 @media (width < 1024px) {
@@ -264,6 +283,7 @@
   .header__theme-menu-list {
     flex-direction: column;
     margin-block-end: 8px;
+    margin-block-start: 192px;
   }
 
   .header__description {
@@ -281,16 +301,44 @@
     gap: 0;
   }
 
-  .section__three {
-    padding-block-start: 9%;
+  .item__title__pad {
+    margin-block-start: 20px;
   }
 
   .gallery__section {
     grid-template-rows: 192px 230px 318px;
   }
+
   .footer {
-    margin-block-start: 61px;
+    min-height: 1024px;
   }
+
+  .footer__title {
+    padding-block-start: 1%;
+  }
+
+  .decorated-zone::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-left: 1px solid var(--decor-zone-corner);
+    border-bottom: 1px solid var(--decor-zone-corner);
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-right: 1px solid var(--decor-zone-corner);
+    border-top: 1px solid var(--decor-zone-corner);
+    top: 20px;
+    right: 20px;
+  }
+
 }
 
 @media (width < 768px) {
@@ -326,7 +374,7 @@
     padding-block-start: 20%;
   }
   .header__theme-menu-list {
-    margin-block-end: 15px;
+    margin-block-start: 0;
   }
 
   .header__description {
@@ -346,28 +394,25 @@
     gap: 20px;
   }
 
-  .content__section__one {
+  .content__section__focused {
     padding-block-start: 0;
   }
 
-  .content__section_two {
+  .content__section__concentrations {
     max-inline-size: max-content;
-    padding-block-start: 9%;
+    padding-block-start: 14%;
   }
 
   .section__title_two {
     width: 100%;
   }
 
-  .title__item__indent__foot {
-    padding-top: 1%;
+  .content__section__gold-fish{
+    padding-block-start: 14%;
   }
 
-  .title__item__indent__device {
-    padding-top: 2%;
-  }
   .gallery__mobil {
-    padding-block-start: 9%;
+    padding-block-start: 15%;
   }
 
   .gallery__section {
@@ -379,6 +424,6 @@
   }
  
   .footer {
-    margin-block-start: 41px;
+    min-height: 668px;
   }
 }

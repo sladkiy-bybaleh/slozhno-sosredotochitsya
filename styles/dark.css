@@ -14,18 +14,25 @@
   --primary-color: #000028;
   --main-background-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
-  --color-menu: #ff0070;
+  --color-menu: #FF007066;
   --color-text-titel: #ff0070;
   --link-color:#ff0070;
   --menu-button-color: #ff0070;
-  --hover-color: 1px solid rgba(50, 49, 45, 0.4);
+  --hover-color: 1px solid #FF007066;
   --hover-color-text: rgba(53, 52, 48, 1);
   --title-color: rgba(219, 0, 255, 1); 
   --title-shadow-color: 4px 4px 0 var(--accent-color);
   --content-text-color: #F1B2CE;
   --section-text-color: #000028;
   --footer-title:  #DB00FF;
-  --color-border-link: #F1B2CE;
+  --color-shadow-link: #FF0070;
+  --menu-batton: #ff0070;
+  --color-focus: #FF0070;
+  --menu-button_active: #FF0070;
+  --color-focus-link: #F1B2CE;
+  --decor-zone: #ff0070;
+  --decor-zone-shadow: #ff0070;
+  --decor-zone-corner: #ff0070;
 }
 
 
@@ -37,43 +44,23 @@
     --main-background-image: url(../images/cover-image-dark.png);
     --accent-color: #ff0070;
     --menu-button-color: #ff0070;
-    --color-menu: #ff0070;
+    --color-menu: #FF007066;
     --link-color:#ff0070;
-    --hover-color: 1px solid rgba(50, 49, 45, 0.4);
+    --hover-color: 1px solid #FF007066;
     --hover-color-text: #ff0070;
     --title-color: rgba(219, 0, 255, 1); 
     --title-shadow-color: 4px 4px 0 var(--accent-color);
     --content-text-color: #F1B2CE;
     --section-text-color: #000028;
     --footer-title:  #DB00FF;
-    --color-border-link: #F1B2CE;
+    --color-shadow-link: #ff0070;
+    --menu-batton: #ff0070;
+    --color-focus: #FF007066;
+    --menu-button_active: #FF0070;
+    --color-focus-link: #F1B2CE;
+    --decor-zone: #ff0070;
+    --decor-zone-shadow: #ff0070;
+    --decor-zone-corner: #ff0070;
   }
 }
 
-.header__theme-menu-button:hover {
-  border: 1px solid var(--color-menu);
-
-}
-.header__theme-menu-button_active {
-  border: 1px solid  var(--color-menu);
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.link:focus {
-  outline: none;
-}
-
-.link:focus-visible {
-  outline: 1px solid var(--color-border-link);
-}
-
-.decorated-zone::before {
-  border-color: #ff0070;
-  }
-  
-  .decorated-zone::after {
-    border-color: #ff0070;
-  }

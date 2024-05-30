@@ -16,7 +16,7 @@
   --main-background-image: url(../images/cover-image-light.png);
   --accent-color: #FF8DCB;
   --color-text-titel: #353430;
-  --color-menu: #353430;
+  --color-menu: #32312D66;
   --shadow-color: #ff0070;
   --link-color: #FF8DCB;
   --menu-button-color: #ff0070;
@@ -24,9 +24,17 @@
   --hover-color-text: rgba(53, 52, 48, 1);
   --title-color: #FFC2E6; 
   --title-shadow-color: 4px 4px 0 var(--accent-color);
-  --content-text-color: #F1B2CE;
+  --content-text-color: #353430;
   --section-text-color: #353430;
   --footer-title:  #FFC2E6;
+  --color-shadow-link: #FF8DCB;
+  --menu-batton: #353430;
+  --color-focus: #353430;
+  --menu-button_active: #353430;
+  --color-focus-link: #353430;
+  --decor-zone: #FFF1F7;
+  --decor-zone-shadow: #FFF1F7;
+  --decor-zone-corner: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -37,7 +45,7 @@
   --main-background-image: url(../images/cover-image-light.png);
   --accent-color: #FF8DCB;
   --color-text-titel: #353430;
-  --color-menu: #353430;
+  --color-menu: #32312D66;
   --shadow-color: #ff0070;
   --menu-button-color: #ff0070;
   --hover-color: 1px solid rgba(50, 49, 45, 0.4);
@@ -45,53 +53,18 @@
   --title-color: #FFC2E6; 
   --link-color: #FF8DCB;
   --title-shadow-color: 4px 4px 0 var(--accent-color);
-  --content-text-color: #F1B2CE;
+  --content-text-color: #353430;
   --section-text-color: #353430;
   --footer-title:  #FFC2E6;
-  --color-border-link: #353430;
+  --color-shadow-link:  #FF8DCB;
+  --menu-batton: #353430;
+  --color-focus: #353430;
+  --menu-button_active: #353430;
+  --color-focus-link: #353430;
+  --decor-zone: #FFF1F7;
+  --decor-zone-shadow: #FFF1F7;
+  --decor-zone-corner: #353430;
     }
   }
 
-.page.theme_light .header__decor__rec {
-  display: none;
-}
-
-
-
-.header__theme-menu-button:hover {
-  border: 1px solid var(--color-menu);
-}
-
-.header__theme-menu-button_active {
-  border: 1px solid var(--color-menu);
-}
-
-.header__theme-menu-button:focus {
-  border: none;
-  outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--color-menu);
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.link:focus {
-  outline: none;
-}
-
-.link:focus-visible {
-  outline: 1px solid var(--color-border-link);
-}
-
-.decorated-zone::before {
-border-color: var(--color-menu);
-}
-
-.decorated-zone::after {
-  border-color: var(--color-menu);
-}
-
+  
